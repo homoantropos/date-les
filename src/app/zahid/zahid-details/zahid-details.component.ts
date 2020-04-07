@@ -5,7 +5,7 @@ import {ZahidService} from '../../servises/zahid.service';
 
 @Component({
   selector: 'app-zahid-details',
-  templateUrl: '../zahid.component.html',
+  templateUrl: './zahid-details.html',
   styleUrls: ['../zahid.component.css']
 })
 export class ZahidDetailsComponent implements OnInit {
