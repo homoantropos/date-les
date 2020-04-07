@@ -11,6 +11,7 @@ import { SheduleComponent } from './shedule/shedule.component';
 import { ZahidCreatorComponent } from './zahid-creator/zahid-creator.component';
 import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { HomeComponent } from './home/home.component';
+import { ZahidDetailsComponent } from './zahid/zahid-details/zahid-details.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     ZahidCreatorComponent,
     ErrorHandlerComponent,
     HomeComponent,
+    ZahidDetailsComponent,
   ],
   imports: [
     BrowserModule,
