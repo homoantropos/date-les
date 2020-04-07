@@ -30,3 +30,11 @@ th{
 .days{
 	width: 14%;
 }
+
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}

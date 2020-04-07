@@ -8,4 +8,5 @@ static shedule: Zahid[] = [
   new Zahid('Чемпіонат 1', 4, new Date(2020, 3, 14), new Date(2020, 3, 17), 2)
 ];
 
+static zahidIds = 2;
 }

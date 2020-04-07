@@ -10,7 +10,9 @@ import {ZahidDetailsComponent} from './zahid/zahid-details/zahid-details.compone
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'shedule', component: SheduleComponent, children:},
+  {path: 'shedule', component: SheduleComponent, children: [{
+    path: 'add', component: ZahidCreatorComponent
+    }]},
   {path: 'creator', component: ZahidCreatorComponent},
   {path: 'shedule/:id', component: ZahidDetailsComponent},
   {path: '**', component: ErrorHandlerComponent}

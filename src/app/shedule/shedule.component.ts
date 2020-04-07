@@ -12,8 +12,10 @@ import { ZahidService } from '../servises/zahid.service';
 })
 
 export class SheduleComponent {
-shedule$: Observable<Zahid[]>;
-id: number;
+  shedule$: Observable<Zahid[]>;
+  id: number;
+  addAllowed = false;
+  buttonName = 'Додати захід';
 
 constructor(
   private router: Router,
@@ -40,4 +42,12 @@ addZahid(zahid: Zahid) {
   Shedule.shedule = Shedule.shedule.sort((a, b) => a.getStart() - b.getStart());
   }
 
+  allowAdding() {
+    this.addAllowed = !this.addAllowed;
+    if (this.addAllowed) {
+      this.buttonName = 'Закрити';
+    } else {
+      this.buttonName = 'Додати захід';
+    }
+  }
 }

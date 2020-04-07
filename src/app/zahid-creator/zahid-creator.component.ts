@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Zahid } from '../zahid/zahid.model';
 import {DateProviderService} from '../servises/date-provider.service';
+import {Shedule} from '../shedule/shedule';
 
 @Component({
   selector: 'app-zahid-creator',
@@ -18,7 +19,6 @@ constructor(private dateProvider: DateProviderService) {
 }
 ngOnInit() {
   this.zahidCreatorForm = new FormGroup({
-    id: new FormControl('', Validators.required),
     title: new FormControl('', Validators.required),
     start: new FormGroup({
       year: new FormControl('', Validators.required),
@@ -35,6 +35,7 @@ ngOnInit() {
 }
 createZahid(valueF: any) {
 //  const zahidCreated = (value as Zahid);
+  const id = Shedule.zahidIds++;
   const zahidCreated = new Zahid (
     valueF.title,
     this.dateProvider.provideDays(
@@ -42,7 +43,7 @@ createZahid(valueF: any) {
       this.dateProvider.provideDate(valueF.end)),
     this.dateProvider.provideDate(valueF.start),
     this.dateProvider.provideDate(valueF.end),
-    valueF.id);
+    id);
   this.createdZahid.emit(zahidCreated);
   this.zahidCreatorForm.reset();
 }

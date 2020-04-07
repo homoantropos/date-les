@@ -109,12 +109,10 @@ img {
       text-decoration: line-through;
 }
 
-
 input,
 select,
 textarea {
   display: block;
-  width: 70%;
   padding: 0.4rem;
   font-size: 0.9rem;
   border: 1px solid #ccc;
@@ -152,4 +150,12 @@ hr {
     color: #fff;
     padding: 0.45rem;
     margin: 0 0.25rem;
+}
+
+.lft {
+  float: left;
+}
+
+.rght {
+  float: right;
 }

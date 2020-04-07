@@ -1,22 +1,27 @@
-<input [(ngModel)] = "id">
-<button (click) = "getZahid(id)">Переглянути захід</button>
+<div class = "container">
+ <div>
+  <div *ngIf="addAllowed" [ngStyle] = "{'margin-bottom': '-20px'}">
+   <app-zahid-creator (createdZahid)="addZahid($event)"></app-zahid-creator>
+  </div>
+  <button
+    [style.marginTop] = "'none'"
+   class = "btn lf"
+   (click)="allowAdding()">
+    {{ buttonName }}
+  </button>
 
-<div>
- <div class = "container">
-  <h1>КАЛЕНДАР СПОРТИВНИХ ЗАХОДІВ</h1>
-  <input
-    [style.float] = "'left'"
-    id = "search"
-    type = "text"
-    name="search"
-    title="Поле для пошуку"
-    placeholder="Пошук...">
-   <button
-     class = "btn"
-     [style.float]="'right'"
-     (click) = "goToCreator()"
-   >Додати</button>
-   <button class = "btn" [style.float]="'left'">Знайти</button>
+  <input class = "rt"
+   id = "search"
+   type = "text"
+   name="search"
+   title="Поле для пошуку"
+   [style.marginTop] = "'none'"
+   placeholder="Пошук...">
+  <button
+    class = "btn rt"
+    [style.marginTop] = "'none'">
+    Знайти
+  </button>
  </div>
 
  <div class = "sheduleContainer">
@@ -38,5 +43,4 @@
   </a>
  </div>
 </div>
-<app-zahid-creator (createdZahid) = "addZahid($event)"></app-zahid-creator>
-<router-outlet></router-outlet>
+
