@@ -1,0 +1,32 @@
+.sheduleContainer{
+	width: 100%;
+}
+
+table{
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+th{
+	border: solid red 0.1px;
+	text-align: center;
+	padding: 5px;
+}
+
+.id{
+	width: 5%;
+}
+
+.title{
+	width: 50%;
+	text-align: left;
+}
+
+.start{
+	width: 20%;
+}
+
+.days{
+	width: 14%;
+}

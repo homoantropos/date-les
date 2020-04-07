@@ -1,0 +1,42 @@
+<input [(ngModel)] = "id">
+<button (click) = "getZahid(id)">Переглянути захід</button>
+
+<div>
+ <div class = "container">
+  <h1>КАЛЕНДАР СПОРТИВНИХ ЗАХОДІВ</h1>
+  <input
+    [style.float] = "'left'"
+    id = "search"
+    type = "text"
+    name="search"
+    title="Поле для пошуку"
+    placeholder="Пошук...">
+   <button
+     class = "btn"
+     [style.float]="'right'"
+     (click) = "goToCreator()"
+   >Додати</button>
+   <button class = "btn" [style.float]="'left'">Знайти</button>
+ </div>
+
+ <div class = "sheduleContainer">
+   <table>
+    <tr>
+     <th class = "id">№<br>з/п</th>
+     <th class = "title">Назва заходу</th>
+     <th class = "start">Дата початку</th>
+     <th class = "start">Дата завершення</th>
+     <th class = "days">Тривалість</th>
+    </tr>
+   </table>
+ </div>
+
+ <div class = "sheduleContainer"
+	*ngFor = "let zahid of getShedule()">
+  <a [routerLink] = "['/shedule', zahid.getId()]">
+    <app-zahid [zahid]="zahid"></app-zahid>
+  </a>
+ </div>
+</div>
+<app-zahid-creator (createdZahid) = "addZahid($event)"></app-zahid-creator>
+<router-outlet></router-outlet>
