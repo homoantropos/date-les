@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { SheduleComponent } from './shedule/shedule.component';
-import { ZahidCreatorComponent } from './zahid-creator/zahid-creator.component';
-import { ZahidComponent } from './zahid/zahid.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { EventCreatorComponent } from './event-creator/event-creator.component';
+import { EventRowComponent } from './event/event-row.component';
 import {ErrorHandlerComponent} from './error-handler/error-handler.component';
 import {HomeComponent} from './home/home.component';
-import {ZahidDetailsComponent} from './zahid/zahid-details/zahid-details.component';
+import {EventDetailsComponent} from './event/event-details/event-details.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'shedule', component: SheduleComponent, children: [{
-    path: 'add', component: ZahidCreatorComponent
+  {path: 'schedule', component: ScheduleComponent, children: [{
+    path: 'add', component: EventCreatorComponent
     }]},
-  {path: 'creator', component: ZahidCreatorComponent},
-  {path: 'shedule/:id', component: ZahidDetailsComponent},
+  {path: 'creator', component: EventCreatorComponent},
+  {path: 'schedule/:id', component: EventDetailsComponent},
   {path: '**', component: ErrorHandlerComponent}
 ];
 
