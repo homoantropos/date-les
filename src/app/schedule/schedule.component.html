@@ -33,13 +33,8 @@
          <th class = "days">Тривалість</th>
      </tr>
 
-     <tr *ngFor = "let event of getSchedule()">
-
-           <td>
-             <a [routerLink] = "['/schedule', event.id]">
-               {{ event.title }}</a>
-           </td>
-
+     <tr (click)="redirectToEvent(event)" *ngFor = "let event of getSchedule()">
+           <td>{{ event.title }}</td>
            <td>{{ event.startDay | date: 'dd.MM.yy'}}</td>
            <td>{{ event.finishDay | date: 'dd.MM.yy' }}</td>
            <td>{{ event.days | number:'1.0-0'}}</td>

@@ -50,4 +50,8 @@ addEvent(event: Event) {
       this.buttonName = 'Додати захід';
     }
   }
+
+  redirectToEvent(event: Event) {
+    this.router.navigateByUrl(`/schedule/${event.id}`);
+  }
 }

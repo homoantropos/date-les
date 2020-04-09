@@ -9,11 +9,16 @@ table{
   border: 1px solid red;
 }
 
-th, td{
+th, td {
   /*width: 30px;*/
-	border: 1px solid red;
+  border: 1px solid red;
 	text-align: center;
 	padding: 5px;
+}
+
+td {
+  cursor: pointer;
+
 }
 
 /*
