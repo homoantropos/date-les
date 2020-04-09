@@ -1,0 +1,85 @@
+<div class = "container">
+
+ <p>ДОДАТИ ПОДІЮ</p>
+
+ <form
+	    [formGroup] = "eventCreatorForm"
+    	(ngSubmit) = "createEvent(eventCreatorForm.value)">
+
+     <label for = "title">Назва заходу:</label>
+     <input
+          id = "title"
+          type = "text"
+          name = "title"
+          title = "Введіть назву заходу."
+          placeholder = "Назва заходу..."
+          formControlName = "title">
+
+     <div [ngStyle] = "{width: '100%', height: '70px'}">
+            <label for = "startDay">Дата початку</label>
+            <form
+                formGroupName = "startDay"
+                id = "startDay">
+
+                 <input
+                type = "text"
+                name = "year"
+                title = "Рік"
+                placeholder = "Рік..."
+                class = "lft"
+                formControlName = "year">
+
+             <input
+                type = "text"
+                name = "month"
+                title = "Місяць"
+                placeholder = "Місяць..."
+                class = "lft"
+                formControlName = "month">
+
+             <input
+                type = "text"
+                name = "day"
+                title = "День"
+                placeholder = "День..."
+                class = "lft"
+                formControlName = "day">
+    </form>
+  </div>
+     <div [ngStyle] = "{width: '100%', height: '70px'}">
+      <label for = "endDay">Дата завершення:</label>
+      <form formGroupName = "endDay" id = "endDay">
+        <input
+          type = "text"
+          name = "year"
+          title = "Рік"
+          placeholder = "Рік..."
+          class = "lft"
+          formControlName = "year">
+
+        <input
+          type = "text"
+          name = "month"
+          title = "Місяць"
+          placeholder = "Місяць..."
+          class = "lft"
+          formControlName = "month">
+
+        <input
+          type = "text"
+          name = "day"
+          title = "День"
+          placeholder = "День..."
+          class = "lft"
+          formControlName = "day">
+       </form>
+    </div>
+      <div>
+        <button class = "btn lft"
+                type = "submit"
+                [style.margineLeft] = "'40px'">
+          Додати
+        </button>
+      </div>
+ </form>
+</div>

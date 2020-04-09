@@ -6,23 +6,23 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ZahidComponent } from './zahid/zahid.component';
-import { SheduleComponent } from './shedule/shedule.component';
-import { ZahidCreatorComponent } from './zahid-creator/zahid-creator.component';
+import { EventRowComponent } from './event/event-row.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { EventCreatorComponent } from './event-creator/event-creator.component';
 import { ErrorHandlerComponent } from './error-handler/error-handler.component';
 import { HomeComponent } from './home/home.component';
-import { ZahidDetailsComponent } from './zahid/zahid-details/zahid-details.component';
+import { EventDetailsComponent } from './event/event-details/event-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZahidComponent,
-    SheduleComponent,
-    ZahidCreatorComponent,
+    EventRowComponent,
+    ScheduleComponent,
+    EventCreatorComponent,
     ErrorHandlerComponent,
     HomeComponent,
-    ZahidDetailsComponent,
+    EventDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,36 +1,35 @@
-.sheduleContainer{
-	width: 100%;
+td{
+  width: 30px;
+  border: 1px solid red;
+  text-align: center;
+  padding: 5px;
+  table-layout: fixed;
 }
 
-table{
+/*table{
 	width: 100%;
 	table-layout: fixed;
 	border-collapse: collapse;
 }
 
-th{
-	border: solid red 0.1px;
+td{
+	border: solid red 1px;
+  border-top: none;
 	text-align: center;
 	padding: 5px;
-}
+}*/
 
+/*
 .title{
 	width: 55%;
 	text-align: left;
 }
 
-.start{
+.start .finish{
 	width: 20%;
 }
 
 .days{
 	width: 14%;
 }
-
-.lf {
-  float: left;
-}
-
-.rt {
-  float: right;
-}
+*/

@@ -1,16 +1,27 @@
+.scheduleContainer{
+	width: 100%;
+}
+
 table{
 	width: 100%;
 	table-layout: fixed;
 	border-collapse: collapse;
+  border: 1px solid red;
 }
 
-td{
-	border: solid red 0.1px;
-  border-top: none;
+th, td {
+  /*width: 30px;*/
+  border: 1px solid red;
 	text-align: center;
 	padding: 5px;
 }
 
+td {
+  cursor: pointer;
+
+}
+
+/*
 .title{
 	width: 55%;
 	text-align: left;
@@ -23,3 +34,12 @@ td{
 .days{
 	width: 14%;
 }
+
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+*/
