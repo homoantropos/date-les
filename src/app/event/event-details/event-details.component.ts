@@ -5,8 +5,8 @@ import {EventService} from '../../servises/event.service';
 
 @Component({
   selector: 'app-event-details',
-  templateUrl: './event-details.html',
-  styleUrls: ['../event-row.component.css']
+  templateUrl: './event-details.component.html',
+  styleUrls: ['./event-details.component.css']
 })
 export class EventDetailsComponent implements OnInit {
 
@@ -17,7 +17,7 @@ export class EventDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params: Params) => this.event = this.eventService.getEvent(+params.id) );
+    this.route.params.subscribe((params: Params) => this.event = this.eventService.getEvent(params.id) );
   }
 
 }

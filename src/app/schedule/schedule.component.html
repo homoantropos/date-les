@@ -1,7 +1,7 @@
 <div class = "container">
  <div>
   <div *ngIf="addAllowed" [ngStyle] = "{'margin-bottom': '-20px'}">
-   <app-event-creator (createdZahid)="addEvent($event)"></app-event-creator>
+   <event-creator-form (createdEvent)="addEvent($event)"></event-creator-form>
   </div>
   <button
     [style.marginTop] = "'none'"

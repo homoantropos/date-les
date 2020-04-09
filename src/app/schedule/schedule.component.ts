@@ -36,11 +36,8 @@ getSchedule(): Event[] {
 }
 
 addEvent(event: Event) {
-  event.id = Schedule.schedule.length;
   Schedule.schedule.unshift(event);
-    // @ts-ignore
-  Schedule.schedule = Schedule.schedule.sort((a, b) => a.startDay - b.startDay);
-  }
+}
 
   allowAdding() {
     this.addAllowed = !this.addAllowed;
